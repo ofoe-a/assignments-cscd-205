@@ -1,9 +1,11 @@
+//Ofoe Agbettor
+//10677304
 #include<iostream>
 using namespace std;
 int main(){
 int num;
 int res=0;
-cout<< "Please enter your number to find out if itÕs a prime number" <<endl;
+cout<< "Please enter your number to find out if itÃ•s a prime number" <<endl;
 cin >> num;
     //Use for loop
     for(int n= 1; n<= num; n++)
