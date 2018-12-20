@@ -1,0 +1,136 @@
+//#include "staff.h"
+//#include "student.h"
+using namespace std;
+
+bool checkCourse = true;
+struct Course {   //structure of Course //
+ char title[50];
+ int id;
+ Staff *staff;
+ Student *students;
+ Course *next;
+}*head,*lastptr;
+
+void addCourse() {   //Adds record of Course//
+ Course *p;
+ p=new Course;
+ cout<<"Enter name of Course:"<<endl;
+ gets(p->name);
+ fflush(stdin);
+ cout<<"Enter discipline of Course:"<<endl;
+ gets(p->discipline);
+ fflush(stdin);
+ cout<<"Enter ID of Course:"<<endl;
+ cin>>p->rollNo;
+ fflush(stdin);
+ cout<<"Enter section of Course:"<<endl;
+ cin>>p->section;
+ fflush(stdin);
+ p->next=NULL;
+
+ if(checkCourse) {
+  head = p;
+  lastptr = p;
+  checkCourse = false;
+ } else {
+  lastptr->next=p;
+  lastptr=p;
+ }
+ cout<<endl<<"Recored Entered";
+ getch();
+}
+
+void modifyCourse() {   //modifies record of Course//{
+ Course *ptr;
+ Course *prev=NULL;
+ Course *current=NULL;
+ int id;
+ cout<<"Enter ID to search:"<<endl;
+ cin>>id;
+ prev=head;
+ current=head;
+ while(current->rollNo!=id){
+  prev=current;
+  current=current->next;
+ }
+ ptr=new Course;
+ fflush(stdin);
+ cout<<"Enter name of Course:"<<endl;
+ gets(ptr->name);
+ fflush(stdin);
+ cout<<"Enter discipline of Course:"<<endl;
+ gets(ptr->discipline);
+ fflush(stdin);
+ cout<<"Enter ID of Course:"<<endl;
+ cin>>ptr->rollNo;
+ fflush(stdin);
+ cout<<"Enter section of Course:"<<endl;
+ cin>>ptr->section;
+ fflush(stdin);
+ prev->next=ptr;
+ ptr->next=current->next;
+ current->next=NULL;
+ delete current;
+ cout<<endl<<"Recored Modified";
+ getch();
+}
+void searchCourse() {  //searches record of Course//
+ Course *prev=NULL;
+ Course *current=NULL;
+ int id;
+ cout<<"Enter ID to search:"<<endl;
+ cin>>id;
+ prev=head;
+ current=head;
+ while(current->rollNo!=id)
+ {
+  prev=current;
+  current=current->next;
+ }
+ cout<<"\nname: ";
+ puts(current->name);
+ cout<<"\nRoll No:";
+ cout<<current->rollNo;
+ cout<<"\nDiscipline:";
+ puts(current->discipline);
+ cout<<"\nSection:";
+ cout<<current->section;
+ getch();
+}
+void delCourse() {   //deletes record of a Course//
+ Course *ptr=NULL;
+ Course *prev=NULL;
+ Course *current=NULL;
+ int id;
+ cout<<"Enter ID to Delete:"<<endl;
+ cin>>id;
+ prev=head;
+ current=head;
+ while(current->rollNo!=id)
+ {
+  prev=current;
+  current=current->next;
+ }
+ prev->next = current->next;
+ current->next=NULL;
+ delete current;
+ cout<<endl<<"Record Deleted";
+ getch();
+}
+
+void getAllCourses(){
+    Course *prev=NULL;
+    Course *current=NULL;
+    prev=head;
+    current=head;
+    cout<<"\nCourses available\n";
+    while(current->next!=NULL) {
+        prev=current;
+        cout<<"\nname: ";
+        puts(current->name);
+        current=current->next;
+    }
+    getch();
+}
+
+

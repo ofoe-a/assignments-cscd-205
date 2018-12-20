@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1545335001 source:c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\main.cpp
+	<iostream>
+	<fstream>
+	<Windows.h>
+	<cctype>
+	<conio.h>
+	"include\student.h"
+	"include\staff.h"
+
+1545335001 taff.h"
+
+1544865463 source:c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\src\linkedlist.cpp
+	"linkedlist.h"
+	<iostream>
+
+1544865463 
+
+1544865261 c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\include\linkedlist.h
+
+1544865014 source:c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\test.cpp
+	<conio.h>
+	<iostream>
+	<fstream>
+	<Windows.h>
+	<dos.h>
+	<cctype>
+	<sstream>
+	<string>
+
+1545334994 
+
+1544869651 source:c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\course.cpp
+
+1544902108 c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\student.h
+	<iostream>
+	<fstream>
+	<Windows.h>
+	<dos.h>
+	<cctype>
+	<sstream>
+	<string>
+	<conio.h>
+
+1545334994 c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\include\student.h
+	"course.h"
+	<vector>
+
+1545334924 c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\include\staff.h
+
+1545335067 c:\users\blueicedpen\desktop\schoolmanagement\schoolmanagement\schoolmanagement\include\course.h
+
+1545335002 source:/Users/ofoeagbettor/Downloads/SchoolManagement  10677304/SchoolManagement_10677304/SchoolManagement_10677304/main.cpp
+	<iostream>
+	<fstream>
+	<Windows.h>
+	<cctype>
+	<conio.h>
+	"include\student.h"
+	"include\staff.h"
+
